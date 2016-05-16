@@ -1,4 +1,4 @@
-angular.module('app.routes', ['ionicUIRouter'])
+angular.module('app.routes', [])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -10,7 +10,7 @@ angular.module('app.routes', ['ionicUIRouter'])
     
   
 
-      .state('tabsMenu.home', {
+      .state('tabsController.home', {
     url: '/home',
     views: {
       'tab1': {
@@ -20,67 +20,33 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  /* 
-    The IonicUIRouter.js UI-Router Modification is being used for this route.
-    To navigate to this route, do NOT use a URL. Instead use one of the following:
-      1) Using the ui-sref HTML attribute:
-        ui-sref='tabsMenu.horRios'
-      2) Using $state.go programatically:
-        $state.go('tabsMenu.horRios');
-    This allows your app to figure out which Tab to open this page in on the fly.
-    If you're setting a Tabs default page or modifying the .otherwise for your app and
-    must use a URL, use one of the following:
-      /tabs-menu/tab1/horarios
-      /tabs-menu/tab2/horarios
-  */
-  .state('tabsMenu.horRios', {
+  .state('tabsController.horarios', {
     url: '/horarios',
     views: {
-      'tab1': {
-        templateUrl: 'templates/horRios.html',
-        controller: 'horRiosCtrl'
-      },
       'tab2': {
-        templateUrl: 'templates/horRios.html',
-        controller: 'horRiosCtrl'
+        templateUrl: 'templates/horarios.html',
+        controller: 'horariosCtrl'
       }
     }
   })
 
-  .state('tabsMenu', {
-    url: '/tabs-menu',
-    templateUrl: 'templates/tabsMenu.html',
+  .state('tabsController', {
+    url: '/tabs',
+    templateUrl: 'templates/tabsController.html',
     abstract:true
   })
 
-  /* 
-    The IonicUIRouter.js UI-Router Modification is being used for this route.
-    To navigate to this route, do NOT use a URL. Instead use one of the following:
-      1) Using the ui-sref HTML attribute:
-        ui-sref='tabsMenu.horRio'
-      2) Using $state.go programatically:
-        $state.go('tabsMenu.horRio');
-    This allows your app to figure out which Tab to open this page in on the fly.
-    If you're setting a Tabs default page or modifying the .otherwise for your app and
-    must use a URL, use one of the following:
-      /tabs-menu/tab1/horario
-      /tabs-menu/tab2/horario
-  */
-  .state('tabsMenu.horRio', {
+  .state('tabsController.horario', {
     url: '/horario',
     views: {
-      'tab1': {
-        templateUrl: 'templates/horRio.html',
-        controller: 'horRioCtrl'
-      },
       'tab2': {
-        templateUrl: 'templates/horRio.html',
-        controller: 'horRioCtrl'
+        templateUrl: 'templates/horario.html',
+        controller: 'horarioCtrl'
       }
     }
   })
 
-$urlRouterProvider.otherwise('/tabs-menu/home')
+$urlRouterProvider.otherwise('/tabs/home')
 
   
 

@@ -4,11 +4,11 @@ angular.module('app.controllers', [])
 
 })
    
-.controller('horRiosCtrl', function($scope) {
+.controller('horariosCtrl', function($scope) {
 
 })
-         
-.controller('horRioCtrl', function($scope) {
+      
+.controller('horarioCtrl', function($scope) {
 
 })
  
