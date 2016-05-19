@@ -1,14 +1,8 @@
 <ion-view title="{{ logo }}" id="page5" class=" ">
     <ion-content padding="true" class="has-header">
         <ion-list id="horario-list2" class=" ">
-            <ion-item id="horario-list-item4" class="  ">Horário de funcionamento
-                <span class="item-note">06:00 - 24:00</span>
-            </ion-item>
-            <ion-item id="horario-list-item5" class="  ">Alongamento
-                <span class="item-note">07:00</span>
-            </ion-item>
-            <ion-item id="horario-list-item6" class="  ">Jump
-                <span class="item-note">10:00</span>
+            <ion-item id="horario-list-item4" class="  " ng-repeat="sub_horario in horario.sub_horarios">{{sub_horario.nome}}
+                <span class="item-note">{{sub_horario.horario}}</span>
             </ion-item>
         </ion-list>
     </ion-content>

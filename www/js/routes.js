@@ -37,7 +37,7 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.horario', {
-    url: '/horario',
+    url: '/horarios/:dia_semana',
     views: {
       'tab2': {
         templateUrl: 'templates/horario.html',
